@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Todo } from 'src/app/models/todo.model';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-todos-items',
@@ -9,6 +10,9 @@ import { Todo } from 'src/app/models/todo.model';
 export class TodosItemsComponent implements OnInit {
 
   @Input() todo: Todo;
+
+  checkField: FormControl;
+  inputTxt: FormControl;
 
   constructor() { }
 
