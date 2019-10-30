@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { todoReducer } from './components/todo/todo.reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { appReducers } from './app.reducer';
 
 // Forms
 import { ReactiveFormsModule } from '@angular/forms';
@@ -33,7 +34,7 @@ import { environment } from '../environments/environment.prod';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({todos: todoReducer}),
+    StoreModule.forRoot( appReducers ),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production,
