@@ -10,7 +10,7 @@ export function filterReducer(state = estadoInicial, action: fromFilter.acciones
 
     switch(action.type){
         case fromFilter.SET_FILTER:
-            return action.filter;
+            return action.filter;  
         default: 
             return state;
     }

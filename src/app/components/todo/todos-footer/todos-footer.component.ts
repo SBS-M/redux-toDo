@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { AppState } from '../../../app.reducer';
 import * as fromFilterAction from './../../../filter/filter.action';
 import { filtrosValidos, SetFilterAction } from '../../../filter/filter.action';
+import * as fromTodoActions from './../todo.actions';
 import { Todo } from 'src/app/models/todo.model';
 
 @Component({
@@ -34,6 +35,11 @@ export class TodosFooterComponent implements OnInit {
 
   public countTareasPendientes(todos: Array<Todo>){
     this.tareasPendientes = todos.filter(todo => !todo.completado).length;
+  }
+
+  public cleanComplete(){
+    const action = new fromTodoActions.ClearCompleteAction();
+    this.store.dispatch(action);
   }
 
 }

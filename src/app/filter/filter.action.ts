@@ -18,4 +18,4 @@ export class SetFilterAction implements Action{
 } */
 
 
-export type acciones = SetFilterAction;
+export type acciones = SetFilterAction ;

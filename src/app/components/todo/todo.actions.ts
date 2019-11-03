@@ -3,9 +3,10 @@ import { Store, Action } from '@ngrx/store';
 
 export const AGREGAR_TODO = '[todo] Agregar todo';
 export const CHANGE_CHECK = '[todo] Cambiar todo';
-export const EDIT_TODO = '[todo] Editar todo'
-export const DELETE_TODO = '[todo] Eliminar todo'
-export const SELECT_ALL = '[todo] Seleccionar todos los todo'
+export const EDIT_TODO = '[todo] Editar todo';
+export const DELETE_TODO = '[todo] Eliminar todo';
+export const SELECT_ALL = '[todo] Seleccionar todos los todo';
+export const CLEAR_COMPLETE = '[Filter] Clear complete'
 
 export class AgregarTodoAction implements Action{
     readonly type = AGREGAR_TODO;
@@ -37,4 +38,9 @@ export class SelectAllTodoAction implements Action{
     constructor( public completado: boolean){}
 }
 
-export type Acciones = AgregarTodoAction | ChangeCheckAction | EditTodoAction | DeleteTodoAction | SelectAllTodoAction;
+export class ClearCompleteAction implements Action{
+    readonly type = CLEAR_COMPLETE;
+}
+
+export type Acciones = AgregarTodoAction | ChangeCheckAction | EditTodoAction | DeleteTodoAction | SelectAllTodoAction
+| ClearCompleteAction;

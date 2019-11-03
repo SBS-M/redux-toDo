@@ -1,6 +1,6 @@
 
 export const filtrosValidosString = {
-    COMPLETADO: 'completado',
+    COMPLETADO: 'completados',
     TODOS: 'todos',
     PENDIENTES: 'pendientes'
 }
